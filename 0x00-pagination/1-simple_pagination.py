@@ -54,8 +54,8 @@ class Server:
             List[List]: appropriate subset of the dataset using
             the calculated indices.
         """
-        assert isinstance(page, int) and page > 0, "Integer is greater than 0"
-        assert isinstance(page_size, int) and page_size > 0, "Integer is > 0"
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
 
         dataset = self.dataset()
         total_pages = math.ceil(len(dataset) / page_size)
