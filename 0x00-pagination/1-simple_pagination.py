@@ -27,6 +27,8 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """__init__ method
+        """
         self.__dataset = None
 
     def dataset(self) -> List[List]:
