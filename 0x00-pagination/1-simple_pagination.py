@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+""" Implement a get_page method to get the subsets """
 import csv
 import math
 from typing import List, Tuple
-""" Implement a get_page method to get the subsets """
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
@@ -32,8 +32,13 @@ class Server:
         self.__dataset = None
 
     def dataset(self) -> List[List]:
-        """Cached dataset
+        """Get the dataset from the CSV file.
+
+        Returns:
+            List[List]: The dataset containing the rows of the CSV file.
+
         """
+
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
                 reader = csv.reader(f)
