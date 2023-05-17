@@ -1,3 +1,4 @@
 venv
 .vscode
 0x00-pagination/Popular_Baby_Names.csv
+0x00-pagination/__pycache__
