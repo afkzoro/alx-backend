@@ -1,12 +1,24 @@
+#!/usr/bin/env python3
 import csv
 import math
 from typing import List, Tuple
+""" Implement a get_page method to get the subsets """
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    """ a function named index_range that takes
+    two integer arguments page and page_size
+
+    Args:
+        page (int): page number
+        page_size (int): page size
+
+    Returns:
+        tuple[int, int]: Return index of the starting page and last page
+    """
     start_index = (page - 1) * page_size
-    end_index = page * page_size
-    return start_index, end_index
+    end_index = start_index + page_size
+    return (start_index, end_index)
 
 
 class Server:
