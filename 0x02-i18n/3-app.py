@@ -11,10 +11,10 @@ babel = Babel(app)
 class Config:
     """ Babel config
     """
-    LANGUAGES = ["en", "fr"]
-    BABEL_DEFAULT_LOCALE = 'en'
-    BABEL_DEFAULT_TIMEZONE = 'UTC'
-    BABEL_TRANSLATION_DIRECTORIES = 'translations'
+    LANGUAGES: list[str] = ["en", "fr"]
+    BABEL_DEFAULT_LOCALE: str = 'en'
+    BABEL_DEFAULT_TIMEZONE: str = 'UTC'
+    BABEL_TRANSLATION_DIRECTORIES: str = 'translations'
 
 
 app.config.from_object(Config)
