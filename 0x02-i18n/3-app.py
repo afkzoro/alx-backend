@@ -2,6 +2,7 @@
 """ Task-1 Flask-Babel """
 from flask import Flask, render_template, request
 from flask_babel import Babel, gettext
+import typing
 
 app = Flask(__name__)
 babel = Babel(app)
@@ -20,14 +21,14 @@ app.config.from_object(Config)
 
 
 @app.route('/')
-def index():
+def index() -> str:
     """ index function
     """
     return render_template('3-index.html', gettext=gettext)
 
 
 @babel.localeselector
-def get_locale():
+def get_locale() -> str:
     """
     This function determines the best-matching language based
     on the Accept-Language header of the request.
