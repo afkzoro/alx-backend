@@ -2,7 +2,7 @@
 """ Task-1 Flask-Babel """
 from flask import Flask, render_template, request
 from flask_babel import Babel, gettext
-import typing
+from typing import List
 
 app = Flask(__name__)
 babel = Babel(app)
@@ -11,7 +11,7 @@ babel = Babel(app)
 class Config:
     """ Babel config
     """
-    LANGUAGES: list[str] = ["en", "fr"]
+    LANGUAGES: List[str] = ["en", "fr"]
     BABEL_DEFAULT_LOCALE: str = 'en'
     BABEL_DEFAULT_TIMEZONE: str = 'UTC'
     BABEL_TRANSLATION_DIRECTORIES: str = 'translations'
