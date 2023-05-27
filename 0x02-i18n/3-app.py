@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Task-1 Flask-Babel """
 from flask import Flask, render_template, request
-from flask_babel import Babel
+from flask_babel import Babel, gettext
 
 app = Flask(__name__)
 babel = Babel(app)
@@ -22,7 +22,7 @@ app.config.from_object(Config)
 def index():
     """ index function
     """
-    return render_template('3-index.html')
+    return render_template('3-index.html', gettext=gettext)
 
 
 @babel.localeselector
