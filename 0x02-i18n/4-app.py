@@ -24,7 +24,7 @@ app.config.from_object(Config)
 def index() -> str:
     """ index function
     """
-    return render_template('3-index.html', gettext=gettext)
+    return render_template('4-index.html', gettext=gettext)
 
 
 @babel.localeselector
