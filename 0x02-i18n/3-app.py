@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Task-1 Flask-Babel """
+""" Task-3 Flask-Babel """
 from flask import Flask, render_template, request
 from flask_babel import Babel, gettext
 from typing import List
